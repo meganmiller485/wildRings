@@ -5,4 +5,7 @@ const apiRouter = express.Router();
 const usersRouter = require("./users");
 apiRouter.use("/users", usersRouter);
 
+const printPostsRouter = require("./printPosts");
+apiRouter.use("/posts", printPostsRouter);
+
 module.exports = apiRouter;
