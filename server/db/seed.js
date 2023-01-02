@@ -87,7 +87,17 @@ async function createPrintPost() {
 			description:
 				"Ranking among the largest wildfires in Oregon's history, The Holiday Farm Fire occurred in 2020, buring a total of 173,393 acres alongside the beautiful McKenzie River vally in Lane County",
 		});
+
+		const post2 = await createPost({
+			authorId: megan.id,
+			title: "Cameron Peak Fire",
+			image: "No Image Yet",
+			description:
+				"Starting near Chambers Lake in the Rocky Mountain's of Colorado, The Cameron Peak Fire devastated roughtly 208,663 acres of land.",
+		});
+
 		console.log("First post:", post1);
+		console.log("Second post:", post2);
 		console.log("Done creating posts.");
 	} catch (error) {
 		throw error;

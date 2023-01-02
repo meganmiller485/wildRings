@@ -1,10 +1,10 @@
 {
   "name": "wildtreerings",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "seed:dev": "nodemon ./db/seed.js"
+    "seed:dev": "nodemon ./db/seed.js",
+    "dev": "nodemon index"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "description": ""
 }
