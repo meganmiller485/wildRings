@@ -7,11 +7,11 @@ async function createPrint({ authorId, title, image, description }) {
     } = await client.query(
       `
             INSERT INTO prints ( title, image, description)
-            VALUES ($1, $2, $3, $4)
+            VALUES ($1, $2, $3)
             ON CONFLICT (title) DO NOTHING
             RETURNING *;
         `,
-      [authorId, title, image, description]
+      [title, image, description]
     );
 
     return post;
