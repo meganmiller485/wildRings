@@ -1,20 +1,20 @@
-const express = require("express");
-const usersRouter = express.Router();
+// const express = require("express");
+// const usersRouter = express.Router();
 
-const { getAllUsers } = require("../db");
+// const { getAllUsers } = require("../db");
 
-usersRouter.use((req, res, next) => {
-	console.log("A request is being made to /users");
+// usersRouter.use((req, res, next) => {
+// 	console.log("A request is being made to /users");
 
-	next();
-});
+// 	next();
+// });
 
-usersRouter.get("/", async (req, res) => {
-	const users = await getAllUsers();
+// usersRouter.get("/", async (req, res) => {
+// 	const users = await getAllUsers();
 
-	res.send({
-		users,
-	});
-});
+// 	res.send({
+// 		users,
+// 	});
+// });
 
-module.exports = usersRouter;
+// module.exports = usersRouter;
