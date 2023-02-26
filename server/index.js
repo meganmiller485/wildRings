@@ -8,6 +8,6 @@ server.listen(PORT, () => {
   console.log(
     chalk.blueBright('Server is listening on PORT:'),
     chalk.yellow(PORT),
-    chalk.blueBright('Women rule!')
+    chalk.blueBright('Wild Rings up and running!')
   );
 });

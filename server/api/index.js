@@ -2,7 +2,7 @@ const express = require('express');
 const apiRouter = express.Router();
 const { JWT_SECRET } = process.env;
 const jwt = require('jsonwebtoken');
-// const { getUserById } = require('../db');
+const { getUserById } = require('../db');
 
 apiRouter.use(async (req, res, next) => {
   const prefix = 'Bearer ';
@@ -38,7 +38,10 @@ apiRouter.use((req, res, next) => {
   next();
 });
 
-// const usersRouter = require('./users');
-// apiRouter.use('/users', usersRouter);
+const usersRouter = require('./users');
+apiRouter.use('/users', usersRouter);
+
+const printsRouter = require('./prints');
+apiRouter.use('/prints', printsRouter);
 
 module.exports = apiRouter;

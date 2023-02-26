@@ -96,6 +96,32 @@ async function getPrintByActive(active) {
   }
 }
 
+async function updatePrint(id, { ...fields }) {
+  console.log('id:', id, 'update fields:', fields);
+  const setString = Object.keys(fields)
+    .map((key, index) => `"${key}"=$${index + 1}`)
+    .join(', ');
+
+  try {
+    const {
+      rows: [print],
+    } = await client.query(
+      `
+      UPDATE prints
+      SET ${setString}
+      WHERE id = ${id}
+      RETURNING *;
+      `,
+
+      Object.values(fields)
+    );
+    console.log('These are my updated prints: ', print);
+    return print;
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   createPrint,
   getAllPrints,
@@ -103,4 +129,5 @@ module.exports = {
   getPrintByTitle,
   getPrintByLocation,
   getPrintByActive,
+  updatePrint,
 };
