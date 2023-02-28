@@ -113,13 +113,13 @@ async function createFakeUsers() {
         name: 'Megan Miller',
         email: 'megan@gmail.com',
         username: 'meg',
-        password: 'mill1',
+        password: 'mill1234',
       },
       {
         name: 'Lindsay Miller',
         email: 'lindsay@gmail.com',
         username: 'linds',
-        password: 'mill1',
+        password: 'mill1234',
       },
     ];
 

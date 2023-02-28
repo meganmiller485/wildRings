@@ -44,4 +44,10 @@ apiRouter.use('/users', usersRouter);
 const printsRouter = require('./prints');
 apiRouter.use('/prints', printsRouter);
 
+const userRolesRouter = require('./userRoles');
+apiRouter.use('/userRoles', userRolesRouter);
+
+const rolesRouter = require('./roles');
+apiRouter.use('/roles', rolesRouter);
+
 module.exports = apiRouter;
