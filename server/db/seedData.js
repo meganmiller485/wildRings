@@ -139,7 +139,7 @@ async function createFakePrints() {
     const fakePrints = [
       {
         title: 'Columbia River Gorge',
-        image: 'No Image',
+        image: '.../client/src/assets/fitness.png',
         description:
           "Timber company, Weyerhaeuser, plans to clear cut over 25-acres of forest near Hood River. 'Friends is very concerned by the proposed clearcuts and the significant adverse effects on the scenic, natural, cultural and recreation resources of the Columbia River Gorge that would result if this project moves forward as proposed.' -Michael Lang",
         location: 'Oregon',
@@ -148,7 +148,7 @@ async function createFakePrints() {
       },
       {
         title: 'Fairy Creek',
-        image: 'No Image',
+        image: '.../client/src/assets/fitness.png',
         description:
           "The battle at Fairy Creek, a fight over some of the planet's oldest trees, has raged for two summers and has led to the most arrest ever for protest in modern Canadian history",
         location: 'British Columbia',
