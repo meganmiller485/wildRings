@@ -1,30 +1,35 @@
 import React from 'react';
+import './AllPrints.css';
+import ring from '../assets/Ring.png';
 
 const AllPrints = ({ prints }) => {
   return (
     <div>
-      <h1 className='print-header'>All PRINTS SUMMON YONDER</h1>
+      <h1 className='print-header'>ALL PRINTS</h1>
       <div className='print-container-description'>
-        These are all the super cool prints my sister made!
+        All prints are hand made and created from a tree stump from within the
+        clear cut area.
       </div>
       <div className='allprints-container'>
         {prints.length > 0 &&
           prints.map((print) => {
-            const image = print.image;
             return (
               <div
                 className='single-print-container'
                 key={print.id}
               >
-                <div>Title: {print.title}</div>
+                <div>{print.title}</div>
+
+                <img
+                  id='ringImg'
+                  src={ring}
+                  alt='img'
+                ></img>
+
+                <div>{print.description}</div>
                 <div>
-                  <img
-                    src={image}
-                    alt='img'
-                  ></img>
+                  <b>Accociated Protection Groups:</b> {print.groups}
                 </div>
-                <div>Description: {print.description}</div>
-                <div>Accociated Protection Groups: {print.groups}</div>
               </div>
             );
           })}

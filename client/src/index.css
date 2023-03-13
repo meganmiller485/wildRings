@@ -30,25 +30,3 @@ a:hover {
 .logo-Nav {
   font-size: larger;
 }
-
-/* ***** PRINTS ***** */
-.print-header {
-  display: flex;
-  justify-content: center;
-}
-.print-container-description {
-  display: flex;
-  justify-content: center;
-}
-.allprints-container {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-}
-.single-print-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  box-shadow: 0 0 1em rgb(158, 159, 166);
-}
