@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../CSS/AllPrints.css';
 import Quantity from './Quantity';
 import ring from '../assets/Ring.png';

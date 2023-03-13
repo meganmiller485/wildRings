@@ -1,0 +1,43 @@
+.region-header {
+  text-align: center;
+}
+
+.region-container {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+
+.region-blocks-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#region-block {
+  text-align: center;
+  padding: 5%;
+  background-color: white;
+  box-shadow: 0 0 1em rgb(158, 159, 166);
+}
+
+#region-block:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#noprintmsg {
+  text-align: center;
+}
+
+.single-print-container-region {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 1em rgb(158, 159, 166);
+}

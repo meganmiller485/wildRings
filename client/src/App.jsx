@@ -5,7 +5,7 @@ import {
   NavBar,
   Home,
   About,
-  Areas,
+  Regions,
   AllPrints,
   GetInvolved,
   Contact,
@@ -36,8 +36,8 @@ function App() {
           element={<About />}
         />
         <Route
-          path='/areas'
-          element={<Areas />}
+          path='/regions'
+          element={<Regions prints={prints} />}
         />
         <Route
           path='/prints'
