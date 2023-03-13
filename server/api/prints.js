@@ -39,7 +39,7 @@ printsRouter.get('/:printId', requireUser, async (req, res, next) => {
 // POST /api/prints
 
 printsRouter.post('/', requireUser, async (req, res, next) => {
-  const { title, image, description, location, groups } = req.body;
+  const { title, image, description, cost, location, groups } = req.body;
   if (req.user);
   {
     try {
@@ -47,6 +47,7 @@ printsRouter.post('/', requireUser, async (req, res, next) => {
         title,
         image,
         description,
+        cost,
         location,
         groups,
       });
@@ -60,7 +61,8 @@ printsRouter.post('/', requireUser, async (req, res, next) => {
 
 //PATCH /api/prints/:printId
 printsRouter.patch('/:printId', requireUser, async (req, res, next) => {
-  const { title, image, description, location, groups, active } = req.body;
+  const { title, image, description, cost, location, groups, active } =
+    req.body;
 
   const id = req.params.printId;
 
@@ -78,6 +80,7 @@ printsRouter.patch('/:printId', requireUser, async (req, res, next) => {
         title,
         image,
         description,
+        cost,
         location,
         groups,
         active,

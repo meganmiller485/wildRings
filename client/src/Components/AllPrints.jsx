@@ -1,5 +1,6 @@
-import React from 'react';
-import './AllPrints.css';
+import React, { useState } from 'react';
+import '../CSS/AllPrints.css';
+import Quantity from './Quantity';
 import ring from '../assets/Ring.png';
 
 const AllPrints = ({ prints }) => {
@@ -27,6 +28,8 @@ const AllPrints = ({ prints }) => {
                 ></img>
 
                 <div>{print.description}</div>
+                <div>Price: ${print.cost}.00</div>
+                <Quantity />
                 <div>
                   <b>Accociated Protection Groups:</b> {print.groups}
                 </div>

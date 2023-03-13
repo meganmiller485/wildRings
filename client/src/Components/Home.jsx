@@ -1,7 +1,12 @@
 import React from 'react';
+import '../CSS/Home.css';
 
 const Home = () => {
-  return <div>HOME CONTENT</div>;
+  return (
+    <div className='home-container'>
+      <div>WELCOME TO WILD RINGS</div>
+    </div>
+  );
 };
 
 export default Home;

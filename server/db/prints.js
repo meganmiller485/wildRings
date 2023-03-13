@@ -1,17 +1,24 @@
 const client = require('./client');
 
-async function createPrint({ title, image, description, location, groups }) {
+async function createPrint({
+  title,
+  image,
+  description,
+  cost,
+  location,
+  groups,
+}) {
   try {
     const {
       rows: [print],
     } = await client.query(
       `
-            INSERT INTO prints ( title, image, description, location, groups)
-            VALUES ($1, $2, $3, $4, $5)
+            INSERT INTO prints ( title, image, description, cost, location, groups)
+            VALUES ($1, $2, $3, $4, $5, $6)
             ON CONFLICT (title) DO NOTHING
             RETURNING *;
         `,
-      [title, image, description, location, groups]
+      [title, image, description, cost, location, groups]
     );
 
     return print;

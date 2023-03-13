@@ -76,6 +76,7 @@ async function createTables() {
           title VARCHAR(255) UNIQUE NOT NULL,
           image VARCHAR(255) NOT NULL,
           description TEXT NOT NULL,
+          cost DECIMAL,
           location VARCHAR(255) NOT NULL,
           groups VARCHAR(255),
           active BOOLEAN DEFAULT true
@@ -142,6 +143,7 @@ async function createFakePrints() {
         image: '.../client/src/assets/fitness.png',
         description:
           "Timber company, Weyerhaeuser, plans to clear cut over 25-acres of forest near Hood River. 'Friends is very concerned by the proposed clearcuts and the significant adverse effects on the scenic, natural, cultural and recreation resources of the Columbia River Gorge that would result if this project moves forward as proposed.' -Michael Lang",
+        cost: 20.0,
         location: 'Oregon',
         groups:
           'Hood River Soil and Water Conservation, Gorge Ecology Outdoors, Columbia Riverkeeper',
@@ -151,6 +153,7 @@ async function createFakePrints() {
         image: '.../client/src/assets/fitness.png',
         description:
           "The battle at Fairy Creek, a fight over some of the planet's oldest trees, has raged for two summers and has led to the most arrest ever for protest in modern Canadian history",
+        cost: 30.0,
         location: 'British Columbia',
         groups: 'Ancient Forest Alliance, Evergreen Alliance',
       },
